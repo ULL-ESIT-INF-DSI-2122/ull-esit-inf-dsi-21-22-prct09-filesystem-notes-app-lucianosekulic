@@ -1,7 +1,7 @@
 import {colores} from './notas';
 import {Notas} from './notas';
 import * as yargs from 'yargs';
-
+import { title } from 'node:process';
 
 const notas: Notas = Notas.getNotas();
 
