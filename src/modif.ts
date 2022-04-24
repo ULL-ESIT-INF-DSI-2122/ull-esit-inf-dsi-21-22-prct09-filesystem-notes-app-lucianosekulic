@@ -3,8 +3,8 @@
  * clase abstracta a modo de template
  */
 export abstract class metodoTemplate {
-    protected arrayInicial: number[];
-    protected num: number;
+    protected arrayInicial: number[] = []
+    protected num: number = 0
     constructor() {}
 
 
@@ -22,7 +22,7 @@ export abstract class metodoTemplate {
      * @returns arrayAux
      */
     protected operationFilter(arrayInicial: number[], numFiltro: number) {
-        let arrayAux: number[];
+        let arrayAux: number[] = []
         for(let i = 0; i < arrayInicial.length; i++) {
             if(arrayInicial[i] > numFiltro) {
                 arrayAux.push(arrayInicial[i])
@@ -38,7 +38,7 @@ export abstract class metodoTemplate {
      * @returns arrayAuxMap
      */
     protected operationMap(arrayInicial: number[]) {
-        let arrayAuxMap: number[];
+        let arrayAuxMap: number[] = []
         for(let i = 0; i < arrayInicial.length; i++) {
             arrayAuxMap.push(Math.pow(arrayInicial[i], 2))
         }
@@ -60,10 +60,10 @@ export class algoritmosGenericos extends metodoTemplate{
         super();
     }
 
-    protected filter(arrayGenerico: number[], operationFilter: (numFiltro: number) => number) {
+    protected filter(operationFilter: (numFiltro: number) => number) {
         return operationFilter
     }
-    protected Map(arrayGenerico: number[], operationMap: (arrayGenerico: number[]) => number) {
+    protected Map(operationMap: (arrayGenerico: number[]) => number) {
         return operationMap
     }
 

@@ -1,3 +1,5 @@
+
+/*
 import 'mocha';
 import { expect } from 'chai';
 import { algoritmosGenericos } from '../src/modif';
@@ -22,3 +24,4 @@ describe('prueba modif', () =>{
     expect(array.reduce(array)).to.be.equal(29);
   });
 })
+*/
